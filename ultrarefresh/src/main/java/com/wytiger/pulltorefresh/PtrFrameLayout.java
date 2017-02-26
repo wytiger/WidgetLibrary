@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import in.srain.cube.views.ptr.indicator.PtrIndicator;
-import in.srain.cube.views.ptr.util.PtrCLog;
+import com.wytiger.pulltorefresh.indicator.PtrIndicator;
+import com.wytiger.pulltorefresh.util.PtrCLog;
+
 
 /**
  * This layout view for "Pull to Refresh(Ptr)" support all of the view, you can contain everything you want.
  * support: pull to refresh / release to refresh / auto refresh / keep header view while refreshing / hide header view while refreshing
- * It defines {@link in.srain.cube.views.ptr.PtrUIHandler}, which allows you customize the UI easily.
+ * It defines {@link com.wytiger.pulltorefresh.PtrUIHandler}, which allows you customize the UI easily.
  */
 public class PtrFrameLayout extends ViewGroup {
 
