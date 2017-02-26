@@ -1,0 +1,74 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="toolbar_height">44dp</dimen>
+
+    <dimen name="activity_horizontal_margin">15dp</dimen>
+    <dimen name="activity_vertical_margin">15dp</dimen>
+    <dimen name="activity_horizontal_padding">15dp</dimen>
+    <dimen name="activity_vertical_padding">15dp</dimen>
+    <dimen name="block_item_margin">15dp</dimen>
+    <dimen name="block_item_margin2">35dp</dimen>
+    <dimen name="block_item_height_15dp">15dp</dimen>
+    <dimen name="block_item_height_50dp">50dp</dimen>
+    <dimen name="block_list_head_height">50dp</dimen>
+    <dimen name="text_spacing_margin">15dp</dimen>
+
+
+    <dimen name="button_corner_radius">5dp</dimen>
+    <dimen name="button_width_330">330dp</dimen>
+    <dimen name="button_width_108">108dp</dimen>
+    <dimen name="button_margin_left">15dp</dimen>
+    <dimen name="button_margin_right">15dp</dimen>
+
+    <dimen name="banner_height">89dp</dimen>
+
+    <dimen name="text_navigation_size">14sp</dimen>
+    <dimen name="text_larger_size">30sp</dimen>
+    <dimen name="text_title_size">18sp</dimen>
+    <dimen name="text_h1_size">16sp</dimen>
+    <dimen name="text_h2_size">14sp</dimen>
+    <dimen name="text_body_size">12sp</dimen>
+    <dimen name="text_size_11sp">11sp</dimen>
+    <dimen name="text_size_30sp">30sp</dimen>
+    <dimen name="text_size_37sp">37sp</dimen>
+    <dimen name="text_size_40sp">40sp</dimen>
+    <dimen name="toolbar_left_title_size">@dimen/text_h2_size</dimen>
+    <dimen name="toolbar_center_title_size">@dimen/text_title_size</dimen>
+    <dimen name="toolbar_right_title_size">@dimen/text_h2_size</dimen>
+    <dimen name="separator_line_size">1px</dimen>
+    <dimen name="separator_line_size2">2px</dimen>
+
+
+    <dimen name="dialog_box_radius">3dp</dimen>
+    <dimen name="dialog_box_radius2">6dp</dimen>
+
+    <!--尺寸-->
+    <dimen name="margin_17dp">17dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_9dp">9dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="margin_6dp">6dp</dimen>
+
+    <dimen name="dimen4dp">4dp</dimen>
+    <dimen name="dimen5dp">5dp</dimen>
+    <dimen name="dimen6dp">6dp</dimen>
+    <dimen name="dimen9dp">9dp</dimen>
+    <dimen name="dimen15dp">15dp</dimen>
+    <dimen name="dimen17dp">17dp</dimen>
+    <dimen name="dimen35dp">35dp</dimen>
+    <dimen name="dimen65dp">65dp</dimen>
+    <dimen name="dimen79dp">79dp</dimen>
+    <dimen name="dimen177dp">177dp</dimen>
+    <dimen name="dimen25dp">25dp</dimen>
+    <dimen name="dimen20dp">20dp</dimen>
+    <dimen name="dimen50dp">50dp</dimen>
+    <dimen name="dimen12sp">12sp</dimen>
+    <dimen name="dimen14sp">14sp</dimen>
+    <dimen name="login_image_height">150dp</dimen>
+    <dimen name="transfer_activity_margin_top">25dp</dimen>
+
+
+</resources>
+

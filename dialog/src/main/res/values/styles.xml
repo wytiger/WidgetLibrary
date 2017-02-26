@@ -1,0 +1,38 @@
+<resources>
+
+
+
+    <style name="WalletDialogTheme" parent="android:Theme.Dialog">
+        <!--除去title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--除去背景色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--除去边框-->
+        <item name="android:windowFrame">@null</item>
+
+    </style>
+
+    <style name="WalletProgressDialogTheme" parent="WalletDialogTheme">
+        <!-- 背后的阴影 -->
+        <item name="android:backgroundDimEnabled" >false</item>
+        <item name="android:windowIsTranslucent" >true</item>
+
+    </style>
+
+    <style name="WalletTostTheme" parent="android:Theme.Dialog">
+        <!--除去title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--除去背景色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--除去边框-->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+
+
+
+
+
+
+</resources>
+

@@ -1,0 +1,1 @@
+include ':app', ':dialog', ':progressdialog', ':ultrapulltorefresh', ':viewpagerindicator', ':baseadapter'
