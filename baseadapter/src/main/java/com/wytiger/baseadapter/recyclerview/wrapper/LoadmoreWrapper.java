@@ -6,7 +6,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
+import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
 
 
 /**
@@ -51,13 +52,13 @@ public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHo
     {
         if (viewType == ITEM_TYPE_LOAD_MORE)
         {
-            com.zhy.adapter.recyclerview.base.ViewHolder holder;
+           ViewHolder holder;
             if (mLoadMoreView != null)
             {
-                holder = com.zhy.adapter.recyclerview.base.ViewHolder.createViewHolder(parent.getContext(), mLoadMoreView);
+                holder = ViewHolder.createViewHolder(parent.getContext(), mLoadMoreView);
             } else
             {
-                holder = com.zhy.adapter.recyclerview.base.ViewHolder.createViewHolder(parent.getContext(), parent, mLoadMoreLayoutId);
+                holder = ViewHolder.createViewHolder(parent.getContext(), parent, mLoadMoreLayoutId);
             }
             return holder;
         }
@@ -81,7 +82,7 @@ public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView)
     {
-        com.zhy.adapter.recyclerview.utils.WrapperUtils.onAttachedToRecyclerView(mInnerAdapter, recyclerView, new com.zhy.adapter.recyclerview.utils.WrapperUtils.SpanSizeCallback()
+        WrapperUtils.onAttachedToRecyclerView(mInnerAdapter, recyclerView, new WrapperUtils.SpanSizeCallback()
         {
             @Override
             public int getSpanSize(GridLayoutManager layoutManager, GridLayoutManager.SpanSizeLookup oldLookup, int position)
