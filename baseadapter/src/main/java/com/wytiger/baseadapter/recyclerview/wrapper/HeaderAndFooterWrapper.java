@@ -1,4 +1,4 @@
-package com.zhy.adapter.recyclerview.wrapper;
+package com.wytiger.baseadapter.recyclerview.wrapper;
 
 import android.support.v4.util.SparseArrayCompat;
 import android.support.v7.widget.GridLayoutManager;
@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zhy.adapter.recyclerview.base.ViewHolder;
-import com.zhy.adapter.recyclerview.utils.WrapperUtils;
+import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
+import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
 
 
 /**
@@ -38,7 +38,7 @@ public class HeaderAndFooterWrapper<T> extends RecyclerView.Adapter<RecyclerView
 
         } else if (mFootViews.get(viewType) != null)
         {
-            ViewHolder holder = ViewHolder.createViewHolder(parent.getContext(), mFootViews.get(viewType));
+           ViewHolder holder = ViewHolder.createViewHolder(parent.getContext(), mFootViews.get(viewType));
             return holder;
         }
         return mInnerAdapter.onCreateViewHolder(parent, viewType);

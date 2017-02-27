@@ -1,13 +1,13 @@
-package com.zhy.adapter.recyclerview;
+package com.wytiger.baseadapter.recyclerview;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zhy.adapter.recyclerview.base.ItemViewDelegate;
-import com.zhy.adapter.recyclerview.base.ItemViewDelegateManager;
-import com.zhy.adapter.recyclerview.base.ViewHolder;
+import com.wytiger.baseadapter.recyclerview.base.ItemViewDelegate;
+import com.wytiger.baseadapter.recyclerview.base.ItemViewDelegateManager;
+import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
 
 import java.util.List;
 

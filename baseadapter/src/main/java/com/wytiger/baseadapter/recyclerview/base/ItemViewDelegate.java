@@ -1,7 +1,5 @@
-package com.zhy.adapter.recyclerview.base;
+package com.wytiger.baseadapter.recyclerview.base;
 
-
-import android.view.View;
 
 /**
  * Created by zhy on 16/6/22.

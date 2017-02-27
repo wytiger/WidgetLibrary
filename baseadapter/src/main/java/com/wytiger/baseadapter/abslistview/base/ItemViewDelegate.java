@@ -1,7 +1,7 @@
 package com.wytiger.baseadapter.abslistview.base;
 
 
-import com.wytiger.baseadapter.abslistview.ViewHelper;
+import com.wytiger.baseadapter.abslistview.ViewHolder;
 
 /**
  * Created by zhy on 16/6/22.
@@ -13,7 +13,7 @@ public interface ItemViewDelegate<T>
 
     public abstract boolean isForViewType(T item, int position);
 
-    public abstract void convert(ViewHelper holder, T t, int position);
+    public abstract void convert(ViewHolder holder, T t, int position);
 
 
 

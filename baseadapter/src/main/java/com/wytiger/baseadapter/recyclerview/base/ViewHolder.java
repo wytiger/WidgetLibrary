@@ -1,4 +1,4 @@
-package com.zhy.adapter.recyclerview.base;
+package com.wytiger.baseadapter.recyclerview.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -1,11 +1,10 @@
-package com.zhy.adapter.recyclerview;
+package com.wytiger.baseadapter.recyclerview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 
-import com.zhy.adapter.recyclerview.base.ItemViewDelegate;
-import com.zhy.adapter.recyclerview.base.ViewHolder;
+import com.wytiger.baseadapter.recyclerview.base.ItemViewDelegate;
+import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
 
 import java.util.List;
 

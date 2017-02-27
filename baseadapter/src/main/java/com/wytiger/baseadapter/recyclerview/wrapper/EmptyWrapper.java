@@ -1,12 +1,12 @@
-package com.zhy.adapter.recyclerview.wrapper;
+package com.wytiger.baseadapter.recyclerview.wrapper;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zhy.adapter.recyclerview.base.ViewHolder;
-import com.zhy.adapter.recyclerview.utils.WrapperUtils;
+import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
+import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
 
 
 /**
@@ -36,7 +36,7 @@ public class EmptyWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolde
     {
         if (isEmpty())
         {
-            ViewHolder holder;
+           ViewHolder holder;
             if (mEmptyView != null)
             {
                 holder = ViewHolder.createViewHolder(parent.getContext(), mEmptyView);
@@ -52,7 +52,7 @@ public class EmptyWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView)
     {
-        WrapperUtils.onAttachedToRecyclerView(mInnerAdapter, recyclerView, new WrapperUtils.SpanSizeCallback()
+      WrapperUtils.onAttachedToRecyclerView(mInnerAdapter, recyclerView, new WrapperUtils.SpanSizeCallback()
         {
             @Override
             public int getSpanSize(GridLayoutManager gridLayoutManager, GridLayoutManager.SpanSizeLookup oldLookup, int position)
@@ -78,7 +78,7 @@ public class EmptyWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolde
         mInnerAdapter.onViewAttachedToWindow(holder);
         if (isEmpty())
         {
-            WrapperUtils.setFullSpan(holder);
+          WrapperUtils.setFullSpan(holder);
         }
     }
 

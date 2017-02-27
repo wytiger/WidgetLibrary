@@ -19,7 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-public class ViewHelper
+public class ViewHolder
 {
     private SparseArray<View> mViews;
     protected int mPosition;
@@ -27,7 +27,7 @@ public class ViewHelper
     private Context mContext;
     protected int mLayoutId;
 
-    public ViewHelper(Context context, View itemView, ViewGroup parent, int position)
+    public ViewHolder(Context context, View itemView, ViewGroup parent, int position)
     {
         mContext = context;
         mConvertView = itemView;
@@ -37,19 +37,19 @@ public class ViewHelper
     }
 
 
-    public static ViewHelper get(Context context, View convertView,
+    public static ViewHolder get(Context context, View convertView,
                                  ViewGroup parent, int layoutId, int position)
     {
         if (convertView == null)
         {
             View itemView = LayoutInflater.from(context).inflate(layoutId, parent,
                     false);
-            ViewHelper holder = new ViewHelper(context, itemView, parent, position);
+            ViewHolder holder = new ViewHolder(context, itemView, parent, position);
             holder.mLayoutId = layoutId;
             return holder;
         } else
         {
-            ViewHelper holder = (ViewHelper) convertView.getTag();
+            ViewHolder holder = (ViewHolder) convertView.getTag();
             holder.mPosition = position;
             return holder;
         }
@@ -103,56 +103,56 @@ public class ViewHelper
      * @param text
      * @return
      */
-    public ViewHelper setText(int viewId, String text)
+    public ViewHolder setText(int viewId, String text)
     {
         TextView tv = getView(viewId);
         tv.setText(text);
         return this;
     }
 
-    public ViewHelper setImageResource(int viewId, int resId)
+    public ViewHolder setImageResource(int viewId, int resId)
     {
         ImageView view = getView(viewId);
         view.setImageResource(resId);
         return this;
     }
 
-    public ViewHelper setImageBitmap(int viewId, Bitmap bitmap)
+    public ViewHolder setImageBitmap(int viewId, Bitmap bitmap)
     {
         ImageView view = getView(viewId);
         view.setImageBitmap(bitmap);
         return this;
     }
 
-    public ViewHelper setImageDrawable(int viewId, Drawable drawable)
+    public ViewHolder setImageDrawable(int viewId, Drawable drawable)
     {
         ImageView view = getView(viewId);
         view.setImageDrawable(drawable);
         return this;
     }
 
-    public ViewHelper setBackgroundColor(int viewId, int color)
+    public ViewHolder setBackgroundColor(int viewId, int color)
     {
         View view = getView(viewId);
         view.setBackgroundColor(color);
         return this;
     }
 
-    public ViewHelper setBackgroundRes(int viewId, int backgroundRes)
+    public ViewHolder setBackgroundRes(int viewId, int backgroundRes)
     {
         View view = getView(viewId);
         view.setBackgroundResource(backgroundRes);
         return this;
     }
 
-    public ViewHelper setTextColor(int viewId, int textColor)
+    public ViewHolder setTextColor(int viewId, int textColor)
     {
         TextView view = getView(viewId);
         view.setTextColor(textColor);
         return this;
     }
 
-    public ViewHelper setTextColorRes(int viewId, int textColorRes)
+    public ViewHolder setTextColorRes(int viewId, int textColorRes)
     {
         TextView view = getView(viewId);
         view.setTextColor(mContext.getResources().getColor(textColorRes));
@@ -160,7 +160,7 @@ public class ViewHelper
     }
 
     @SuppressLint("NewApi")
-    public ViewHelper setAlpha(int viewId, float value)
+    public ViewHolder setAlpha(int viewId, float value)
     {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
         {
@@ -176,21 +176,21 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setVisible(int viewId, boolean visible)
+    public ViewHolder setVisible(int viewId, boolean visible)
     {
         View view = getView(viewId);
         view.setVisibility(visible ? View.VISIBLE : View.GONE);
         return this;
     }
 
-    public ViewHelper linkify(int viewId)
+    public ViewHolder linkify(int viewId)
     {
         TextView view = getView(viewId);
         Linkify.addLinks(view, Linkify.ALL);
         return this;
     }
 
-    public ViewHelper setTypeface(Typeface typeface, int... viewIds)
+    public ViewHolder setTypeface(Typeface typeface, int... viewIds)
     {
         for (int viewId : viewIds)
         {
@@ -201,14 +201,14 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setProgress(int viewId, int progress)
+    public ViewHolder setProgress(int viewId, int progress)
     {
         ProgressBar view = getView(viewId);
         view.setProgress(progress);
         return this;
     }
 
-    public ViewHelper setProgress(int viewId, int progress, int max)
+    public ViewHolder setProgress(int viewId, int progress, int max)
     {
         ProgressBar view = getView(viewId);
         view.setMax(max);
@@ -216,21 +216,21 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setMax(int viewId, int max)
+    public ViewHolder setMax(int viewId, int max)
     {
         ProgressBar view = getView(viewId);
         view.setMax(max);
         return this;
     }
 
-    public ViewHelper setRating(int viewId, float rating)
+    public ViewHolder setRating(int viewId, float rating)
     {
         RatingBar view = getView(viewId);
         view.setRating(rating);
         return this;
     }
 
-    public ViewHelper setRating(int viewId, float rating, int max)
+    public ViewHolder setRating(int viewId, float rating, int max)
     {
         RatingBar view = getView(viewId);
         view.setMax(max);
@@ -238,21 +238,21 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setTag(int viewId, Object tag)
+    public ViewHolder setTag(int viewId, Object tag)
     {
         View view = getView(viewId);
         view.setTag(tag);
         return this;
     }
 
-    public ViewHelper setTag(int viewId, int key, Object tag)
+    public ViewHolder setTag(int viewId, int key, Object tag)
     {
         View view = getView(viewId);
         view.setTag(key, tag);
         return this;
     }
 
-    public ViewHelper setChecked(int viewId, boolean checked)
+    public ViewHolder setChecked(int viewId, boolean checked)
     {
         Checkable view = (Checkable) getView(viewId);
         view.setChecked(checked);
@@ -262,7 +262,7 @@ public class ViewHelper
     /**
      * 关于事件的
      */
-    public ViewHelper setOnClickListener(int viewId,
+    public ViewHolder setOnClickListener(int viewId,
                                          View.OnClickListener listener)
     {
         View view = getView(viewId);
@@ -270,7 +270,7 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setOnTouchListener(int viewId,
+    public ViewHolder setOnTouchListener(int viewId,
                                          View.OnTouchListener listener)
     {
         View view = getView(viewId);
@@ -278,7 +278,7 @@ public class ViewHelper
         return this;
     }
 
-    public ViewHelper setOnLongClickListener(int viewId,
+    public ViewHolder setOnLongClickListener(int viewId,
                                              View.OnLongClickListener listener)
     {
         View view = getView(viewId);

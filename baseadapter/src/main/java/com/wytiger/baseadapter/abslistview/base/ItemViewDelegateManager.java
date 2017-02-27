@@ -2,7 +2,7 @@ package com.wytiger.baseadapter.abslistview.base;
 
 import android.support.v4.util.SparseArrayCompat;
 
-import com.wytiger.baseadapter.abslistview.ViewHelper;
+import com.wytiger.baseadapter.abslistview.ViewHolder;
 
 
 /**
@@ -83,7 +83,7 @@ public class ItemViewDelegateManager<T>
                 "No ItemViewDelegate added that matches position=" + position + " in data source");
     }
 
-    public void convert(ViewHelper holder, T item, int position)
+    public void convert(ViewHolder holder, T item, int position)
     {
         int delegatesCount = delegates.size();
         for (int i = 0; i < delegatesCount; i++)

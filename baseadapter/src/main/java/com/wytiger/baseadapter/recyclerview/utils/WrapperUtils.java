@@ -1,4 +1,4 @@
-package com.zhy.adapter.recyclerview.utils;
+package com.wytiger.baseadapter.recyclerview.utils;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
