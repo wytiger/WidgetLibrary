@@ -14,7 +14,7 @@ import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
  * Created by zhy on 16/6/23.
  */
 public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>
-{//edit
+{
     public static final int ITEM_TYPE_LOAD_MORE = Integer.MAX_VALUE - 2;
 
     private RecyclerView.Adapter mInnerAdapter;
