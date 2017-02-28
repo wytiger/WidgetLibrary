@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-
 /**
  * description:自定义进度对话框
  * Created by wytiger on 2016-11-9.
@@ -30,7 +29,7 @@ public class AppProgressDialog extends AlertDialog {
     public AppProgressDialog(Context context) {
 //        super(context);
         //使用这个主题去除边框等
-        super(context, R.style.WalletProgressDialogTheme);
+        super(context, R.style.AppProgressDialogTheme);
         this.context = context;
     }
 
