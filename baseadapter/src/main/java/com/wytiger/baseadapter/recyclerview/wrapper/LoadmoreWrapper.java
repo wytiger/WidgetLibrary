@@ -10,7 +10,7 @@ import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
 import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
 
 
-/**edit
+/**
  * Created by zhy on 16/6/23.
  */
 public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>
@@ -52,7 +52,7 @@ public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHo
     {
         if (viewType == ITEM_TYPE_LOAD_MORE)
         {
-           ViewHolder holder;
+            ViewHolder holder;
             if (mLoadMoreView != null)
             {
                 holder = ViewHolder.createViewHolder(parent.getContext(), mLoadMoreView);
