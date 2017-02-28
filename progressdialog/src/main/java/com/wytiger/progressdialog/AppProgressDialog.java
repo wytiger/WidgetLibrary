@@ -50,7 +50,7 @@ public class AppProgressDialog extends AlertDialog {
         setContentView(R.layout.layout_custom_progress);
 
         //点击imageview外侧区域，动画会消失
-        setCanceledOnTouchOutside(false);
+        setCanceledOnTouchOutside(true);
 
         dialogView = findViewById(R.id.ll_dialog);
         ivImage = (ImageView) dialogView.findViewById(R.id.ivImage);

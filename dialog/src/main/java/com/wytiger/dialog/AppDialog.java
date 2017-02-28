@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.wytiger.dialog.functions.Action0;
+import com.wytiger.dialog.listener.Listener;
 
 
 /**
@@ -81,7 +81,7 @@ public class AppDialog extends Dialog {
         return this;
     }
 
-    public AppDialog setOnDismissListener(final Action0 listener) {
+    public AppDialog setOnDismissListener(final Listener listener) {
         this.setOnDismissListener(new OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialogInterface) {
