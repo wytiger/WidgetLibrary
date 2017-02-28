@@ -60,8 +60,8 @@ public class AppProgressDialog extends AlertDialog {
         }
 
 
-        dialogView.setMinimumWidth((int) (ScreenUtil.getScreenWidth(context) * 0.44));
-        dialogView.setMinimumHeight((int) (ScreenUtil.getScreenHeight(context) * 0.16875));
+        dialogView.setMinimumWidth((int) (ScreenUtil.getScreenWidth(context) * 0.45));
+        dialogView.setMinimumHeight((int) (ScreenUtil.getScreenHeight(context) * 0.20));
 
         //加载动画资源
         animation = AnimationUtils.loadAnimation(context, R.anim.rotate_custom_progress);
@@ -77,8 +77,7 @@ public class AppProgressDialog extends AlertDialog {
 
     @Override
     protected void onStop() {
-        super.onStop();
-
         ivImage.clearAnimation();
+        super.onStop();
     }
 }

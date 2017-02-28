@@ -54,6 +54,12 @@ public class AppDialog extends Dialog {
         return this;
     }
 
+    public AppDialog setConfirmButton(String confirmText, OnConfirmButtonClickListener confirmListener) {
+        this.confirmText = confirmText;
+        this.confirmListener = confirmListener;
+
+        return this;
+    }
 
     public AppDialog setCancelButton(String cancelText, OnCancelButtonClickListener cancelListener) {
         this.cancelText = cancelText;
@@ -74,12 +80,7 @@ public class AppDialog extends Dialog {
         return this;
     }
 
-    public AppDialog setConfirmButton(String confirmText, OnConfirmButtonClickListener confirmListener) {
-        this.confirmText = confirmText;
-        this.confirmListener = confirmListener;
 
-        return this;
-    }
 
     public AppDialog setOnDismissListener(final Listener listener) {
         this.setOnDismissListener(new OnDismissListener() {
