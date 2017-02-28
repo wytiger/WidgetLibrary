@@ -39,7 +39,7 @@ public class AppDialog extends Dialog {
     private OnConfirmButtonClickListener confirmListener;
 
     public AppDialog(Context context) {
-        super(context, R.style.WalletDialogTheme);
+        super(context, R.style.AppDialogTheme);
         this.context = context;
     }
 

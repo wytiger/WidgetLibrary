@@ -23,12 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.tvDialog:
                 AppDialog appDialog = new AppDialog(this);
-                appDialog.setConfirmButton("确定", new AppDialog.OnConfirmButtonClickListener() {
-                    @Override
-                    public void onConfirmButtonClick(Dialog dialog) {
-                        dialog.dismiss();
-                    }
-                })
+                appDialog.setMessage("Dialog测试")
+                        .setConfirmButton("确定", new AppDialog.OnConfirmButtonClickListener() {
+                            @Override
+                            public void onConfirmButtonClick(Dialog dialog) {
+                                dialog.dismiss();
+                            }
+                        })
                         .setCancelButton("取消", new AppDialog.OnCancelButtonClickListener() {
                             @Override
                             public void onCancelButtonClick(Dialog dialog) {
