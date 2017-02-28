@@ -352,7 +352,6 @@ public class LinePageIndicator extends View implements PageIndicator {
      *            A measureSpec packed into an int
      * @return The width of the view, honoring constraints from measureSpec
      */
-    @Deprecated
     private int measureWidth(int measureSpec) {
         float result;
         int specMode = MeasureSpec.getMode(measureSpec);
@@ -380,7 +379,6 @@ public class LinePageIndicator extends View implements PageIndicator {
      *            A measureSpec packed into an int
      * @return The height of the view, honoring constraints from measureSpec
      */
-    @Deprecated
     private int measureHeight(int measureSpec) {
         float result;
         int specMode = MeasureSpec.getMode(measureSpec);
