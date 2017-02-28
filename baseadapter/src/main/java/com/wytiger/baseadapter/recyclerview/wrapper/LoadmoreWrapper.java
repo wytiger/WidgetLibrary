@@ -10,7 +10,7 @@ import com.wytiger.baseadapter.recyclerview.base.ViewHolder;
 import com.wytiger.baseadapter.recyclerview.utils.WrapperUtils;
 
 
-/**
+/**edit
  * Created by zhy on 16/6/23.
  */
 public class LoadMoreWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>
