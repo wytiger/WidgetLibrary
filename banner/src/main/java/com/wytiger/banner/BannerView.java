@@ -16,6 +16,7 @@ import java.lang.reflect.Field;
 /**
  * 广告条组件
  * 可以设置是否自动滚动, 滚动到边界时循环滚动或者将事件传递到上一层
+ * linked:https://github.com/Trinea/android-auto-scroll-view-pager
  * @author wytiger
  * @date 2016年2月26日
  */
