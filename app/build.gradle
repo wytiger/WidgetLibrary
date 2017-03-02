@@ -27,5 +27,4 @@ dependencies {
     compile project(':progressdialog')
     compile project(':ultrarefresh')
     compile project(':viewpagerindicator')
-    compile project(':banner')
 }
