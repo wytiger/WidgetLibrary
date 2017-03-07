@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wytiger.dialog.AppDialog;
-import com.wytiger.progressdialog.AppLoadingDialog;
+import com.wytiger.loadingdialog.AppLoadingDialog;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.wytiger.progressdialog;
+package com.wytiger.loadingdialog;
 
 import android.app.Activity;
 import android.content.Context;
