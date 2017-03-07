@@ -28,4 +28,5 @@ dependencies {
     compile project(':ultrarefresh')
     compile project(':viewpagerindicator')
     compile project(':banner')
+    compile project(':widget')
 }
