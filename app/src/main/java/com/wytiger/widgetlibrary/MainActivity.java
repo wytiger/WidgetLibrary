@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wytiger.dialog.AppDialog;
-import com.wytiger.progressdialog.AppProgressDialog;
+import com.wytiger.progressdialog.AppLoadingDialog;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .show();
                 break;
             case R.id.tvProgressDialog:
-                AppProgressDialog appProgressDialog = new AppProgressDialog(this);
-                appProgressDialog.show();
+                AppLoadingDialog appLoadingDialog = new AppLoadingDialog(this);
+                appLoadingDialog.show();
                 break;
         }
     }
