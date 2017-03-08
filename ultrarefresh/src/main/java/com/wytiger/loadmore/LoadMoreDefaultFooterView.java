@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.wytiger.pulltorefresh.R;
+import com.wytiger.ultrarefresh.R;
 
 
 public class LoadMoreDefaultFooterView extends RelativeLayout implements LoadMoreUIHandler {

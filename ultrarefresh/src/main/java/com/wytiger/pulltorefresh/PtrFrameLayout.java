@@ -10,7 +10,7 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 import android.widget.TextView;
-
+import com.wytiger.ultrarefresh.R;
 import com.wytiger.pulltorefresh.indicator.PtrIndicator;
 import com.wytiger.pulltorefresh.util.PtrCLog;
 

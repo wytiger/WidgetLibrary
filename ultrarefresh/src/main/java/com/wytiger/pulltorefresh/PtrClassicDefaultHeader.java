@@ -11,7 +11,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
+import com.wytiger.ultrarefresh.R;
 import com.wytiger.pulltorefresh.indicator.PtrIndicator;
 
 import java.text.SimpleDateFormat;
