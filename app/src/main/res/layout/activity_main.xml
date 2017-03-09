@@ -23,5 +23,11 @@
         android:layout_height="30dp"
         android:text="ProgressDialog"/>
 
+    <TextView
+        android:id="@+id/tvRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Refresh"/>
+
 
 </LinearLayout>

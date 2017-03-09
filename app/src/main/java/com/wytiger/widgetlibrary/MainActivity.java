@@ -1,6 +1,7 @@
 package com.wytiger.widgetlibrary;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.tvDialog).setOnClickListener(this);
         findViewById(R.id.tvProgressDialog).setOnClickListener(this);
+        findViewById(R.id.tvRefresh).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tvProgressDialog:
                 AppLoadingDialog appLoadingDialog = new AppLoadingDialog(this);
                 appLoadingDialog.show();
+                break;
+            case R.id.tvRefresh:
+                startActivity(new Intent(this, RefreshActivity.class));
                 break;
         }
     }
