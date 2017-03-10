@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoadingLayoutTheme" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@anim/rotate_custom_progress</item>
+        <item name="android:indeterminateDuration">600</item>
+        <item name="android:minWidth">38dp</item>
+        <item name="android:maxWidth">38dp</item>
+        <item name="android:minHeight">38dp</item>
+        <item name="android:maxHeight">38dp</item>
+    </style>
+</resources>

@@ -11,6 +11,11 @@
     tools:context="com.wytiger.widgetlibrary.MainActivity"
     android:orientation="vertical">
 
+    <com.wytiger.widget.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"/>
+
     <TextView
         android:id="@+id/tvDialog"
         android:layout_width="match_parent"
@@ -18,16 +23,26 @@
         android:text="Dialog"/>
 
     <TextView
-        android:id="@+id/tvProgressDialog"
+        android:id="@+id/tvLoadingDialog"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="ProgressDialog"/>
+        android:text="LoadingDialog"/>
 
     <TextView
         android:id="@+id/tvRefresh"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="Refresh"/>
+    <TextView
+        android:id="@+id/tvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Banner"/>
+    <TextView
+        android:id="@+id/tvAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Adapter"/>
 
 
 </LinearLayout>

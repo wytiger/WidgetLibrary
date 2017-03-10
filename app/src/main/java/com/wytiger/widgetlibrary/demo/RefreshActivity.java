@@ -1,4 +1,4 @@
-package com.wytiger.widgetlibrary;
+package com.wytiger.widgetlibrary.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.view.View;
 import com.wytiger.pulltorefresh.PtrClassicFrameLayout;
 import com.wytiger.pulltorefresh.PtrDefaultHandler;
 import com.wytiger.pulltorefresh.PtrFrameLayout;
+import com.wytiger.widgetlibrary.R;
 
 public class RefreshActivity extends AppCompatActivity {
 

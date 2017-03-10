@@ -1,1 +1,1 @@
-include ':app', ':dialog', ':loadingdialog', ':ultrarefresh', ':viewpagerindicator', ':baseadapter', ':banner', ':widget'
+include ':app', ':dialog', ':loadingdialog', ':ultrarefresh', ':viewpagerindicator', ':baseadapter', ':banner', ':widget', ':loadinglayout'

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoadingLayout</string>
+
+    <string name="loading">加载中...</string>
+    <string name="empty_data_now">暂无数据</string>
+    <string name="http_exception_retry">轻触屏幕，重新加载</string>
+</resources>
