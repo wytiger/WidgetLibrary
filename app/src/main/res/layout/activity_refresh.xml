@@ -8,12 +8,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="123456" />
+        android:text="0123456789" />
 
     <com.wytiger.pulltorefresh.PtrClassicFrameLayout
         android:id="@+id/ptr_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
         <com.wytiger.loadmore.LoadMoreListViewContainer
             android:id="@+id/load_more_list_view_container"
@@ -21,17 +23,14 @@
             android:layout_height="match_parent">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
+            <ListView
+                android:id="@+id/lv_record_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
+                android:dividerHeight="10dp">
 
-        </LinearLayout>
+            </ListView>
+
 
         </com.wytiger.loadmore.LoadMoreListViewContainer>
     </com.wytiger.pulltorefresh.PtrClassicFrameLayout>
