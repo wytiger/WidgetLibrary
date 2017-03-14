@@ -67,7 +67,7 @@ public class AppLoadingDialog extends AlertDialog {
         dialogView.setMinimumHeight((int) (ScreenUtil.getScreenHeight(context) * 0.20));
 
         //加载动画资源
-        animation = AnimationUtils.loadAnimation(context, R.anim.rotate_custom_progress);
+        animation = AnimationUtils.loadAnimation(context, R.anim.rotate_loading_dialog);
     }
 
     @Override
