@@ -28,18 +28,23 @@ public class RefreshActivity extends AppCompatActivity {
 
         final PtrClassicFrameLayout ptr_home = (PtrClassicFrameLayout) findViewById(R.id.ptr_home);
         final LoadMoreListViewContainer loadMoreListViewContainer = (LoadMoreListViewContainer) findViewById(R.id.load_more_list_view_container);
-        final ListView lv = (ListView) findViewById(R.id.lv_record_list);
+        final ListView lv = (ListView) findViewById(R.id.load_more_small_image_list_view);
 
+        int listSize;
         final List<String> list = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 10; i++) {
             list.add(i, "Test" + i);
         }
-        lv.setAdapter(new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, list) {
+        listSize = list.size();
+
+        final   CommonAdapter commonAdapter = new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, list) {
             @Override
             protected void convert(ViewHolder viewHolder, String item, int position) {
-                viewHolder.setText(android.R.id.text1, list.get(position));
+                viewHolder.setText(android.R.id.text1, item);
             }
-        });
+        };
+
+        lv.setAdapter(commonAdapter);
 
         //下拉刷新
         ptr_home.setPtrHandler(new PtrDefaultHandler() {
@@ -63,9 +68,25 @@ public class RefreshActivity extends AppCompatActivity {
 
 
         //上啦加载更多
-        loadMoreListViewContainer.setAutoLoadMore(false);
-        loadMoreListViewContainer.useDefaultHeader();
+//        loadMoreListViewContainer.setAutoLoadMore(false);
+//        loadMoreListViewContainer.useDefaultFooter();
+//        loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
+//            @Override
+//            public void onLoadMore(LoadMoreContainer loadMoreContainer) {
+//                Log.i("wy", "onLoadMore");
+//                loadMoreListViewContainer.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        commonAdapter.notifyDataSetChanged();
+//                        loadMoreListViewContainer.loadMoreFinish(false,true);
+//                    }
+//                },3000);
+//            }
+//        });
+
+        //上啦加载更多
         loadMoreListViewContainer.useDefaultFooter();
+        // binding view and data
         loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
             @Override
             public void onLoadMore(LoadMoreContainer loadMoreContainer) {
@@ -73,7 +94,13 @@ public class RefreshActivity extends AppCompatActivity {
                 loadMoreListViewContainer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        loadMoreListViewContainer.loadMoreFinish(false,true);
+                        // load more
+                        for (int i = 10; i < 20; i++) {
+                            list.add(i, "demo" + i);
+                        }
+//                        listSize = list.size();
+                        commonAdapter.notifyDataSetChanged();
+                        loadMoreListViewContainer.loadMoreFinish(false, true);
                     }
                 },3000);
             }

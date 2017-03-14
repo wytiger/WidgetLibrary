@@ -22,15 +22,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <ListView
-                android:id="@+id/lv_record_list"
+                android:id="@+id/load_more_small_image_list_view"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:dividerHeight="10dp">
-
-            </ListView>
-
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:scrollbarStyle="outsideOverlay" />
 
         </com.wytiger.loadmore.LoadMoreListViewContainer>
     </com.wytiger.pulltorefresh.PtrClassicFrameLayout>
