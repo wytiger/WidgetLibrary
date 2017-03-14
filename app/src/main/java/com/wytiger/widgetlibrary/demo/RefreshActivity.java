@@ -63,12 +63,19 @@ public class RefreshActivity extends AppCompatActivity {
 
 
         //上啦加载更多
-        loadMoreListViewContainer.setAutoLoadMore(true);
+        loadMoreListViewContainer.setAutoLoadMore(false);
+        loadMoreListViewContainer.useDefaultHeader();
         loadMoreListViewContainer.useDefaultFooter();
         loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
             @Override
             public void onLoadMore(LoadMoreContainer loadMoreContainer) {
                 Log.i("wy", "onLoadMore");
+                loadMoreListViewContainer.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadMoreListViewContainer.loadMoreFinish(false,true);
+                    }
+                },3000);
             }
         });
 
