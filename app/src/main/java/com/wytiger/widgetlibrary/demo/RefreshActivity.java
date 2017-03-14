@@ -6,8 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import com.wytiger.baseadapter.abslistview.CommonAdapter;
-import com.wytiger.baseadapter.abslistview.ViewHolder;
+import com.wytiger.adapter.abslistview.CommonAdapter;
+import com.wytiger.adapter.abslistview.ViewHolder;
 import com.wytiger.loadmore.LoadMoreContainer;
 import com.wytiger.loadmore.LoadMoreHandler;
 import com.wytiger.loadmore.LoadMoreListViewContainer;
