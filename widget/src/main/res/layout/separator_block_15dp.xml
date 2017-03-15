@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Space xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/block_item_height_15dp" />
+    <!--通过使用Space控件代替View，提高性能(当Space颜色与背景颜色一致时有效)-->
+    <!--View的颜色与背景颜色一样，不需要设置，减少过渡绘制-->
+    <!-- android:background="@color/separator_block_color"  -->
+
+

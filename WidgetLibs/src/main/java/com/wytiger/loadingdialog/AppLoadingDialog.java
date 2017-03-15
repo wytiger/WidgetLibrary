@@ -50,7 +50,7 @@ public class AppLoadingDialog extends AlertDialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_custom_progress);
+        setContentView(R.layout.layout_loading_dialog);
 
         //点击imageview外侧区域，动画会消失
         setCanceledOnTouchOutside(true);

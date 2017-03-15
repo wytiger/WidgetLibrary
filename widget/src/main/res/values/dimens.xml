@@ -1,0 +1,11 @@
+<resources>
+
+    <!--尺寸-->
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="block_item_height_15dp">15dp</dimen>
+    <dimen name="dialog_box_radius">3dp</dimen>
+    <dimen name="text_title_size">18sp</dimen>
+    <dimen name="text_h1_size">16sp</dimen>
+
+</resources>
+
