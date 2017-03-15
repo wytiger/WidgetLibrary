@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".demo.RefreshActivity" />
         <activity android:name=".demo.BannerActivity" />
         <activity android:name=".demo.AdapterActivity"></activity>
+        <activity android:name=".demo.RefreshActivity" />
+        <activity android:name=".demo.RefreshActivity2" />
     </application>
 
 </manifest>

@@ -24,4 +24,6 @@ dependencies {
     compile project(':ultrarefresh')
     compile project(':viewpagerindicator')
     compile project(':WidgetLibs')
+    //下拉刷新,加载更多
+    compile 'com.chanven.lib:cptr:1.1.0'
 }

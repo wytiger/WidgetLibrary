@@ -28,11 +28,7 @@
         android:layout_height="30dp"
         android:text="LoadingDialog"/>
 
-    <TextView
-        android:id="@+id/tvRefresh"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Refresh"/>
+
     <TextView
         android:id="@+id/tvBanner"
         android:layout_width="match_parent"
@@ -43,6 +39,17 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="Adapter"/>
+
+    <TextView
+        android:id="@+id/tvRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Refresh"/>
+    <TextView
+        android:id="@+id/tvRefresh2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Refresh2"/>
 
 
 </LinearLayout>

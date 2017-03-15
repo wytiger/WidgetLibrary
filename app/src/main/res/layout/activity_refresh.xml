@@ -16,7 +16,6 @@
         android:layout_height="match_parent">
 
 
-
         <com.wytiger.loadmore.LoadMoreListViewContainer
             android:id="@+id/load_more_list_view_container"
             android:layout_width="match_parent"

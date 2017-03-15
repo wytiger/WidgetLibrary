@@ -11,6 +11,7 @@ import com.wytiger.loadingdialog.AppLoadingDialog;
 import com.wytiger.widgetlibrary.demo.AdapterActivity;
 import com.wytiger.widgetlibrary.demo.BannerActivity;
 import com.wytiger.widgetlibrary.demo.RefreshActivity;
+import com.wytiger.widgetlibrary.demo.RefreshActivity2;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,9 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.tvDialog).setOnClickListener(this);
         findViewById(R.id.tvLoadingDialog).setOnClickListener(this);
-        findViewById(R.id.tvRefresh).setOnClickListener(this);
         findViewById(R.id.tvBanner).setOnClickListener(this);
         findViewById(R.id.tvAdapter).setOnClickListener(this);
+        findViewById(R.id.tvRefresh).setOnClickListener(this);
+        findViewById(R.id.tvRefresh2).setOnClickListener(this);
     }
 
     @Override
@@ -49,14 +51,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AppLoadingDialog appLoadingDialog = new AppLoadingDialog(this);
                 appLoadingDialog.show();
                 break;
-            case R.id.tvRefresh:
-                startActivity(new Intent(this, RefreshActivity.class));
-                break;
+
             case R.id.tvBanner:
                 startActivity(new Intent(this, BannerActivity.class));
                 break;
             case R.id.tvAdapter:
                 startActivity(new Intent(this, AdapterActivity.class));
+                break;
+            case R.id.tvRefresh:
+                startActivity(new Intent(this, RefreshActivity.class));
+                break;
+            case R.id.tvRefresh2:
+                startActivity(new Intent(this, RefreshActivity2.class));
                 break;
         }
     }
