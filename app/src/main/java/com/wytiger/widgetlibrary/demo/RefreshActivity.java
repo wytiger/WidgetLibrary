@@ -1,6 +1,7 @@
 package com.wytiger.widgetlibrary.demo;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RefreshActivity extends AppCompatActivity {
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +33,13 @@ public class RefreshActivity extends AppCompatActivity {
         final ListView lv = (ListView) findViewById(R.id.load_more_small_image_list_view);
 
         int listSize;
-        final List<String> list = new ArrayList<>();
+        final List<String> datas = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add(i, "Test" + i);
+            datas.add(i, "Test" + i);
         }
-        listSize = list.size();
+        listSize = datas.size();
 
-        final   CommonAdapter commonAdapter = new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, list) {
+        final   CommonAdapter commonAdapter = new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, datas) {
             @Override
             protected void convert(ViewHolder viewHolder, String item, int position) {
                 viewHolder.setText(android.R.id.text1, item);
@@ -57,7 +59,7 @@ public class RefreshActivity extends AppCompatActivity {
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
                 Log.i("wy", "onRefreshBegin");
-                ptr_home.postDelayed(new Runnable() {
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         ptr_home.refreshComplete();
@@ -85,18 +87,19 @@ public class RefreshActivity extends AppCompatActivity {
 //        });
 
         //上啦加载更多
+        loadMoreListViewContainer.setAutoLoadMore(true);
         loadMoreListViewContainer.useDefaultFooter();
         // binding view and data
         loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
             @Override
             public void onLoadMore(LoadMoreContainer loadMoreContainer) {
                 Log.i("wy", "onLoadMore");
-                loadMoreListViewContainer.postDelayed(new Runnable() {
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         // load more
                         for (int i = 10; i < 20; i++) {
-                            list.add(i, "demo" + i);
+                            datas.add(i, "demo" + i);
                         }
 //                        listSize = list.size();
                         commonAdapter.notifyDataSetChanged();
