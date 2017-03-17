@@ -1,79 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.wytiger.widgetlibrary.MainActivity"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.wytiger.widget.CircleImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#ffff0000"
-        android:src="@drawable/icon_demo"/>
-
-    <com.wytiger.widget.RoundCornerImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:civ_border_width="2dp"
-        app:roundWidth="15dp"
-        app:roundHeight="15dp"
-        android:src="@drawable/icon_demo"/>
-
-    <TextView
-        android:id="@+id/tvDialog"
+    <LinearLayout
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="20dp"
-        android:text="Dialog"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.wytiger.widgetlibrary.MainActivity">
 
-    <TextView
-        android:id="@+id/tvLoadingDialog"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="10dp"
-        android:text="LoadingDialog"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <com.wytiger.widget.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icon_demo"
+                app:civ_border_color="#ffff0000"
+                app:civ_border_width="2dp"/>
 
-    <TextView
-        android:id="@+id/tvBanner"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="10dp"
-        android:text="Banner"/>
-    <TextView
-        android:id="@+id/tvAdapter"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="10dp"
-        android:text="Adapter"/>
-
-    <TextView
-        android:id="@+id/tvRefresh"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="10dp"
-        android:text="Refresh"/>
-    <TextView
-        android:id="@+id/tvRefresh2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="10dp"
-        android:text="Refresh2"/>
+            <com.wytiger.widget.RoundCornerImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icon_demo"
+                app:roundHeight="15dp"
+                app:roundWidth="15dp"/>
+        </LinearLayout>
 
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvDialog"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"
+            android:text="Dialog"/>
+
+        <TextView
+            android:id="@+id/tvLoadingDialog"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="LoadingDialog"/>
+
+
+        <TextView
+            android:id="@+id/tvBanner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Banner"/>
+
+        <TextView
+            android:id="@+id/tvAdapter"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Adapter"/>
+
+        <TextView
+            android:id="@+id/tvRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Refresh"/>
+
+        <TextView
+            android:id="@+id/tvRefresh2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Refresh2"/>
+
+
+    </LinearLayout>
+</ScrollView>
