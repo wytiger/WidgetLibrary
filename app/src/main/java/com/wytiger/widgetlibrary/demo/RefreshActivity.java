@@ -33,11 +33,10 @@ public class RefreshActivity extends AppCompatActivity {
         final LoadMoreListViewContainer loadMoreListViewContainer = (LoadMoreListViewContainer) findViewById(R.id.load_more_list_view_container);
         final ListView lv = (ListView) findViewById(R.id.load_more_small_image_list_view);
 
-        int listSize;
         for (int i = 0; i < 10; i++) {
             datas.add(i, "Test" + i);
         }
-        listSize = datas.size();
+
 
         final   CommonAdapter commonAdapter = new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, datas) {
             @Override
@@ -79,12 +78,11 @@ public class RefreshActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        // load more
-                        for (int i = 10; i < 20; i++) {
-                            datas.add(i, "demo" + i);
-                        }
-//                        listSize = list.size();
-                        datas.add(new String("  ListView item  - add "));
+                        datas.add(new String("  ListView item1"));
+                        datas.add(new String("  ListView item2"));
+                        datas.add(new String("  ListView item3"));
+
+
                         commonAdapter.notifyDataSetChanged();
                         loadMoreListViewContainer.loadMoreFinish(false, true);
                     }
