@@ -22,6 +22,7 @@ import java.util.List;
 
 public class RefreshActivity extends AppCompatActivity {
     Handler handler = new Handler();
+    List<String> datas = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,6 @@ public class RefreshActivity extends AppCompatActivity {
         final ListView lv = (ListView) findViewById(R.id.load_more_small_image_list_view);
 
         int listSize;
-        final List<String> datas = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             datas.add(i, "Test" + i);
         }
@@ -52,7 +52,7 @@ public class RefreshActivity extends AppCompatActivity {
         ptr_home.setPtrHandler(new PtrDefaultHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-                Log.i("wy", "checkCanDoRefresh");
+                Log.d("wy", "checkCanDoRefresh");
                 return PtrDefaultHandler.checkContentCanBePulledDown(frame, lv, header);
             }
 
@@ -70,26 +70,8 @@ public class RefreshActivity extends AppCompatActivity {
 
 
         //上啦加载更多
-//        loadMoreListViewContainer.setAutoLoadMore(false);
-//        loadMoreListViewContainer.useDefaultFooter();
-//        loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
-//            @Override
-//            public void onLoadMore(LoadMoreContainer loadMoreContainer) {
-//                Log.i("wy", "onLoadMore");
-//                loadMoreListViewContainer.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        commonAdapter.notifyDataSetChanged();
-//                        loadMoreListViewContainer.loadMoreFinish(false,true);
-//                    }
-//                },3000);
-//            }
-//        });
-
-        //上啦加载更多
         loadMoreListViewContainer.setAutoLoadMore(true);
         loadMoreListViewContainer.useDefaultFooter();
-        // binding view and data
         loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
             @Override
             public void onLoadMore(LoadMoreContainer loadMoreContainer) {
@@ -102,6 +84,7 @@ public class RefreshActivity extends AppCompatActivity {
                             datas.add(i, "demo" + i);
                         }
 //                        listSize = list.size();
+                        datas.add(new String("  ListView item  - add "));
                         commonAdapter.notifyDataSetChanged();
                         loadMoreListViewContainer.loadMoreFinish(false, true);
                     }

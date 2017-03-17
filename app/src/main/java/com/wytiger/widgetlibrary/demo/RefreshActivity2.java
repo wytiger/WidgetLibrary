@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class RefreshActivity2 extends AppCompatActivity {
 
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
+                Log.i("wy", "onRefreshBegin");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -82,9 +84,9 @@ public class RefreshActivity2 extends AppCompatActivity {
 
 
         ptrClassicFrameLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
-
             @Override
             public void loadMore() {
+                Log.i("wy", "onLoadMore");
                 handler.postDelayed(new Runnable() {
 
                     @Override
