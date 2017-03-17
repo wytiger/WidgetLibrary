@@ -4,7 +4,7 @@
     android:layout_width="157dp"
     android:layout_height="108dp"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/shape_custom_progress"
+    android:background="@drawable/loading_shape"
     android:orientation="vertical">
 
     <ImageView
@@ -13,8 +13,8 @@
         android:layout_height="38dp"
         android:layout_gravity="center"
         android:layout_marginTop="22dp"
-        android:background="@drawable/progress_loading_bg"
-        android:src="@drawable/progress_loading" />
+        android:background="@drawable/loading_dialog_bg"
+        android:src="@drawable/loading_dialog" />
 
     <TextView
         android:id="@+id/tvMessage"
