@@ -1,12 +1,3 @@
-/**
- * @Project: PMH_Main
- * @Title: RoundCornerImageView.java
- * @Package com.pdw.pmh.widget
- * @author huang.b
- * @date 2013-12-25 上午10:28:39
- * @Copyright: 2013 www.paidui.cn Inc. All rights reserved.
- * @version V1.0
- */
 package com.wytiger.widget;
 
 
@@ -23,7 +14,15 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-
+/**
+ * @Project: PMH_Main
+ * @Title: RoundCornerImageView.java
+ * @Package com.pdw.pmh.widget
+ * @author huang.b
+ * @date 2013-12-25 上午10:28:39
+ * @Copyright: 2013 www.paidui.cn Inc. All rights reserved.
+ * @version V1.0
+ */
 /**
  * 圆角控件RoundCornerImageView；
  * roundWidth,roundHeight分别代表圆角的角度

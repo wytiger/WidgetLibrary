@@ -12,15 +12,28 @@
     android:orientation="vertical">
 
     <com.wytiger.widget.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffff0000"
+        android:src="@drawable/icon_demo"/>
+
+    <com.wytiger.widget.RoundCornerImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:civ_border_width="2dp"
+        app:roundWidth="15dp"
+        app:roundHeight="15dp"
+        android:src="@drawable/icon_demo"/>
 
     <TextView
         android:id="@+id/tvDialog"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="@color/colorAccent"
+        android:layout_marginTop="20dp"
         android:text="Dialog"/>
 
     <TextView
