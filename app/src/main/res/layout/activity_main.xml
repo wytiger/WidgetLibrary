@@ -20,12 +20,15 @@
         android:id="@+id/tvDialog"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
         android:text="Dialog"/>
 
     <TextView
         android:id="@+id/tvLoadingDialog"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
         android:text="LoadingDialog"/>
 
 
@@ -33,22 +36,30 @@
         android:id="@+id/tvBanner"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
         android:text="Banner"/>
     <TextView
         android:id="@+id/tvAdapter"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
         android:text="Adapter"/>
 
     <TextView
         android:id="@+id/tvRefresh"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
         android:text="Refresh"/>
     <TextView
         android:id="@+id/tvRefresh2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
         android:text="Refresh2"/>
 
 
