@@ -33,10 +33,7 @@ public class RefreshActivity extends AppCompatActivity {
         final LoadMoreListViewContainer loadMoreListViewContainer = (LoadMoreListViewContainer) findViewById(R.id.load_more_list_view_container);
         final ListView lv = (ListView) findViewById(R.id.load_more_small_image_list_view);
 
-        for (int i = 0; i < 10; i++) {
-            datas.add(i, "Test" + i);
-        }
-
+        initData(loadMoreListViewContainer);
 
         final   CommonAdapter commonAdapter = new CommonAdapter<String>(RefreshActivity.this, android.R.layout.simple_list_item_1, datas) {
             @Override
@@ -82,7 +79,6 @@ public class RefreshActivity extends AppCompatActivity {
                         datas.add(new String("  ListView item2"));
                         datas.add(new String("  ListView item3"));
 
-
                         commonAdapter.notifyDataSetChanged();
                         loadMoreListViewContainer.loadMoreFinish(false, true);
                     }
@@ -90,5 +86,13 @@ public class RefreshActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void initData(LoadMoreListViewContainer loadMoreListViewContainer) {
+        for (int i = 0; i < 30; i++) {
+            datas.add(i, "Test" + i);
+        }
+        //TODO: 这里需要标志emptyResult为false才能加载更多
+        loadMoreListViewContainer.loadMoreFinish(false, true);
     }
 }

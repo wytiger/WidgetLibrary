@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_fragment_home_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:id="@+id/ll_fragment_home_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="0123456789" />
 
     <com.wytiger.pulltorefresh.PtrClassicFrameLayout
         android:id="@+id/ptr_home"
@@ -30,7 +26,7 @@
                 android:listSelector="@android:color/transparent"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:scrollbarStyle="outsideOverlay" />
+                android:scrollbarStyle="outsideOverlay"/>
 
         </com.wytiger.loadmore.LoadMoreListViewContainer>
     </com.wytiger.pulltorefresh.PtrClassicFrameLayout>
