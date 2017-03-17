@@ -9,7 +9,7 @@
         <item name="android:windowFrame">@null</item>
     </style>
 
-    <style name="AppProgressDialogTheme" parent="android:Theme.Dialog">
+    <style name="LoadingDialogTheme" parent="android:Theme.Dialog">
         <!--除去title-->
         <item name="android:windowNoTitle">true</item>
         <!--除去背景色-->

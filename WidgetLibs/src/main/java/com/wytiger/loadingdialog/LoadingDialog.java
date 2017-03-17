@@ -20,7 +20,7 @@ import com.wytiger.widget.R;
  * Created by wytiger on 2016-11-9.
  */
 
-public class AppLoadingDialog extends AlertDialog {
+public class LoadingDialog extends AlertDialog {
     private Context context;
     private Animation animation;
     private View dialogView;
@@ -29,19 +29,21 @@ public class AppLoadingDialog extends AlertDialog {
 
     private String message;
 
-    public AppLoadingDialog(Context context) {
+    public LoadingDialog(Context context) {
 //        super(context);
         //使用这个主题去除边框等
-        super(context, R.style.AppProgressDialogTheme);
+        super(context, R.style.LoadingDialogTheme);
         this.context = context;
     }
 
-    public AppLoadingDialog(Context context, int theme) {
-        super(context, theme);
+    public LoadingDialog(Context context, int theme) {
+//        super(context, theme);
+        //使用这个主题去除边框等
+        super(context, R.style.LoadingDialogTheme);
         this.context = context;
     }
 
-    public AppLoadingDialog setMessage(String message) {
+    public LoadingDialog setMessage(String message) {
         this.message = message;
         return this;
     }

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.wytiger.dialog.AppDialog;
-import com.wytiger.loadingdialog.AppLoadingDialog;
+import com.wytiger.loadingdialog.LoadingDialog;
 import com.wytiger.widgetlibrary.demo.AdapterActivity;
 import com.wytiger.widgetlibrary.demo.BannerActivity;
 import com.wytiger.widgetlibrary.demo.RefreshActivity;
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .show();
                 break;
             case R.id.tvLoadingDialog:
-                AppLoadingDialog appLoadingDialog = new AppLoadingDialog(this);
-                appLoadingDialog.show();
+                LoadingDialog loadingDialog = new LoadingDialog(this);
+                loadingDialog.show();
                 break;
 
             case R.id.tvBanner:
