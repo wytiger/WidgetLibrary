@@ -15,8 +15,9 @@ import java.lang.reflect.Field;
 
 /**
  * 滚动组件
- * 可以设置是否自动滚动, 滚动到边界时循环滚动或者将事件传递到上一层
- * @author wytiger
+ * 可以设置是否自动滚动, 滚动到边界时循环滚动或者将事件传递到上一层.
+ * https://github.com/Trinea/android-auto-scroll-view-pager
+ * @author Trinea
  * @date 2016年2月26日
  */
 public class ScrollPager extends ViewPager {
