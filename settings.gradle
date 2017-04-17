@@ -1,1 +1,1 @@
-include ':app', ':ultrarefresh', ':viewpagerindicator', ':WidgetLibs', ':loadinglayout'
+include ':app', ':WidgetLibs', ':ultrarefresh', ':viewpagerindicator', ':loadinglayout'
