@@ -31,11 +31,15 @@ import com.wytiger.widget.R;
 
 /**
  * XEditText
+ * 带删除功能的EditText；显示或者隐藏密码；可设置自动添加分隔符分割电话号码、银行卡号等；支持禁止Emoji表情符号输入。
  * Github: https://github.com/woxingxiao/XEditText
- * <><p/>
  * Created by woxingxiao on 2017-03-22.
  */
 public class XEditText extends AppCompatEditText {
+    //分隔符
+    public static String SeparatorSpace = " ";
+    public static String SeparatorLine = "-";
+
 
     private String mSeparator; //mSeparator，default is "".
     private boolean disableClear; // disable clear drawable.
