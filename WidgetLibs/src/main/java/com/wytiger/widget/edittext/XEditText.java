@@ -96,15 +96,15 @@ public class XEditText extends AppCompatEditText {
     private void initAttrs(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.XEditText, defStyleAttr, 0);
 
-        mSeparator = a.getString(R.styleable.XEditText_x_separator);
+        mSeparator = a.getString(R.styleable.XEditText_separator);
         if (mSeparator == null) {
             mSeparator = "";
         }
 
-        disableClear = a.getBoolean(R.styleable.XEditText_x_disableClear, false);
+        disableClear = a.getBoolean(R.styleable.XEditText_disableClear, false);
 
         if (!disableClear) {
-            int cdId = a.getResourceId(R.styleable.XEditText_x_clearDrawable, -1);
+            int cdId = a.getResourceId(R.styleable.XEditText_clearDrawable, -1);
             if (cdId == -1)
                 cdId = R.drawable.x_et_svg_ic_clear_24dp;
             mClearDrawable = ContextCompat.getDrawable(context, cdId);
@@ -122,8 +122,8 @@ public class XEditText extends AppCompatEditText {
             mPaint = new Paint();
             mPaint.setAntiAlias(true);
 
-            mShowPwdResId = a.getResourceId(R.styleable.XEditText_x_showPwdDrawable, -1);
-            mHidePwdResId = a.getResourceId(R.styleable.XEditText_x_hidePwdDrawable, -1);
+            mShowPwdResId = a.getResourceId(R.styleable.XEditText_showPwdDrawable, -1);
+            mHidePwdResId = a.getResourceId(R.styleable.XEditText_hidePwdDrawable, -1);
             if (mShowPwdResId == -1)
                 mShowPwdResId = R.drawable.x_et_svg_ic_show_password_24dp;
             if (mHidePwdResId == -1)
@@ -138,14 +138,14 @@ public class XEditText extends AppCompatEditText {
             mTogglePwdDrawable.setBounds(0, 0, mTogglePwdDrawable.getIntrinsicWidth(),
                     mTogglePwdDrawable.getIntrinsicHeight());
 
-            int cdId = a.getResourceId(R.styleable.XEditText_x_clearDrawable, -1);
+            int cdId = a.getResourceId(R.styleable.XEditText_clearDrawable, -1);
             if (cdId == -1)
                 cdId = R.drawable.x_et_svg_ic_clear_24dp;
             mBitmap = getBitmapFromVectorDrawable(context, cdId,
                     cdId == R.drawable.x_et_svg_ic_clear_24dp); // clearDrawable
         }
 
-        disableEmoji = a.getBoolean(R.styleable.XEditText_x_disableEmoji, false);
+        disableEmoji = a.getBoolean(R.styleable.XEditText_disableEmoji, false);
 
         a.recycle();
     }
