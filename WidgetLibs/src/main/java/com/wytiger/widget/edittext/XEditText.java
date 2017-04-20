@@ -18,7 +18,6 @@ import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
-import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -28,6 +27,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.wytiger.widget.R;
+import com.wytiger.widget.edittext.filter.EmojiExcludeFilter;
 
 /**
  * XEditText
@@ -49,7 +49,7 @@ public class XEditText extends AppCompatEditText {
 
     private int mShowPwdResId;
     private int mHidePwdResId;
-    private OnXTextChangeListener mXTextChangeListener;
+    private OnTextChangeListener mTextChangeListener;
     private TextWatcher mTextWatcher;
     private int mPreLength;
     private boolean hasFocused;
@@ -261,22 +261,22 @@ public class XEditText extends AppCompatEditText {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             mPreLength = s.length();
-            if (mXTextChangeListener != null) {
-                mXTextChangeListener.beforeTextChanged(s, start, count, after);
+            if (mTextChangeListener != null) {
+                mTextChangeListener.beforeTextChanged(s, start, count, after);
             }
         }
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (mXTextChangeListener != null) {
-                mXTextChangeListener.onTextChanged(s, start, before, count);
+            if (mTextChangeListener != null) {
+                mTextChangeListener.onTextChanged(s, start, before, count);
             }
         }
 
         @Override
         public void afterTextChanged(Editable s) {
-            if (mXTextChangeListener != null) {
-                mXTextChangeListener.afterTextChanged(s);
+            if (mTextChangeListener != null) {
+                mTextChangeListener.afterTextChanged(s);
             }
 
             int currLength = s.length();
@@ -436,8 +436,8 @@ public class XEditText extends AppCompatEditText {
     /**
      * the same as EditText.addOnTextChangeListener(TextWatcher textWatcher)
      */
-    public void setOnXTextChangeListener(OnXTextChangeListener listener) {
-        this.mXTextChangeListener = listener;
+    public void setOnTextChangeListener(OnTextChangeListener listener) {
+        this.mTextChangeListener = listener;
     }
 
     /**
@@ -447,29 +447,8 @@ public class XEditText extends AppCompatEditText {
         this.mMaxLength = maxLength;
     }
 
-    public interface OnXTextChangeListener {
+    public interface OnTextChangeListener extends TextWatcher{
 
-        void beforeTextChanged(CharSequence s, int start, int count, int after);
-
-        void onTextChanged(CharSequence s, int start, int before, int count);
-
-        void afterTextChanged(Editable s);
     }
 
-    /**
-     * disable emoji and special symbol input
-     */
-    private class EmojiExcludeFilter implements InputFilter {
-
-        @Override
-        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
-            for (int i = start; i < end; i++) {
-                int type = Character.getType(source.charAt(i));
-                if (type == Character.SURROGATE || type == Character.OTHER_SYMBOL) {
-                    return "";
-                }
-            }
-            return null;
-        }
-    }
 }

@@ -1,7 +1,7 @@
 package com.wytiger.widget.edittext;
 
 /**
- * Description:
+ * Description:分割样式
  * Created by wytiger on 2017/4/19
  */
 
