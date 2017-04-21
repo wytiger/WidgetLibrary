@@ -3,7 +3,6 @@ package com.wytiger.loadmore;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -46,7 +45,8 @@ public class LoadMoreDefaultFooterView extends RelativeLayout implements LoadMor
                 mTextView.setText(R.string.load_more_loaded_empty);
             } else {
                 mTextView.setText(R.string.load_more_loaded_no_more);
-                mTextView.setVisibility(View.GONE);
+                //edit by wytiger at 20170421
+                //mTextView.setVisibility(View.GONE);
             }
         } else {
             setVisibility(INVISIBLE);
