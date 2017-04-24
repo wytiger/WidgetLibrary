@@ -37,16 +37,18 @@ public class LoadingLayoutManager {
         });
     }
 
-
+    /**
+     * 显示加载中界面
+     */
     public void showLoadingLayout() {
         loadingLayout.setVisibility(View.VISIBLE);
         loadedResultLayout.setVisibility(View.GONE);
     }
 
     /**
-     * 默认：加载结果界面
+     * 显示加载结果界面
      */
-    public void showLoadedResultLayout() {
+    private void showLoadedResultLayout() {
         rootView.setVisibility(View.VISIBLE);
         loadingLayout.setVisibility(View.GONE);
         loadedResultLayout.setVisibility(View.VISIBLE);
