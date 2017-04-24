@@ -11,6 +11,7 @@ import android.widget.TextView;
  * Desc:
  */
 public class LoadingLayoutManager {
+    //    R.layout.loading_layout;
     private View rootView;
     private View loadingLayout;
     private View loadedResultLayout;
@@ -42,6 +43,9 @@ public class LoadingLayoutManager {
         loadedResultLayout.setVisibility(View.GONE);
     }
 
+    /**
+     * 默认：加载结果界面
+     */
     public void showLoadedResultLayout() {
         rootView.setVisibility(View.VISIBLE);
         loadingLayout.setVisibility(View.GONE);
@@ -57,21 +61,17 @@ public class LoadingLayoutManager {
         isHttpException = false;
     }
 
+    public void showLoadedResult(int loadedResultTextResId) {
+        showLoadedResultLayout();
+        loadedResultTextView.setText(loadedResultTextResId);
+    }
+
     public void showLoadedResult(int loadedResultImageResId, int loadedResultTextResId) {
         showLoadedResultLayout();
         loadedResultImageView.setImageResource(loadedResultImageResId);
         loadedResultTextView.setText(loadedResultTextResId);
     }
 
-    public void showLoadedResult(int loadedResultTextResId) {
-        showLoadedResultLayout();
-        loadedResultTextView.setText(loadedResultTextResId);
-    }
-
-    public void showLoadedResult(String loadedResultText) {
-        showLoadedResultLayout();
-        loadedResultTextView.setText(loadedResultText);
-    }
 
     /**
      * 默认空数据界面
@@ -101,7 +101,9 @@ public class LoadingLayoutManager {
     public interface RequestRetryListener {
         void call();
     }
+
     private RequestRetryListener requestRetryListener;
+
     public void setRequestRetryListener(RequestRetryListener requestRetryListener) {
         this.requestRetryListener = requestRetryListener;
     }
